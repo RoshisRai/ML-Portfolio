@@ -1,55 +1,85 @@
-# Linear Regression - California Housing Dataset
+# Linear Regression Portfolio
 
 ## Overview
-Implementation of Linear Regression algorithm using scikit-learn to predict California housing prices based on demographic and geographic features.
+Collection of Linear Regression implementations using scikit-learn to demonstrate fundamental machine learning concepts across diverse datasets and problem domains.
 
-## Dataset
-- **Source**: California Housing Dataset (scikit-learn)
-- **Samples**: 20,640 houses
-- **Features**: 8 (median income, house age, average rooms, etc.)
-- **Target**: Median house value (in hundreds of thousands of dollars)
+## Projects
 
-## Features
-1. **MedInc**: Median income in block group
-2. **HouseAge**: Median house age in block group
-3. **AveRooms**: Average number of rooms per household
-4. **AveBedrms**: Average number of bedrooms per household
-5. **Population**: Block group population
-6. **AveOccup**: Average number of household members
-7. **Latitude**: Block group latitude
-8. **Longitude**: Block group longitude
+### 1. California Housing Price Prediction
+**File**: `california_housing_regression.py`
+- **Dataset**: California Housing (20,640 samples, 8 features)
+- **Problem**: Predict median house values based on demographic and geographic data
+- **Features**: Median income, house age, average rooms, population, latitude/longitude
+- **Results**: MSE ~0.556 (~$74,600 average error)
 
-## Implementation Details
+### 2. Diabetes Progression Prediction
+**File**: `diabetes_regression.py`
+- **Dataset**: Diabetes Dataset (442 samples, 10 features)
+- **Problem**: Predict disease progression based on patient physiological measurements
+- **Features**: Age, sex, BMI, blood pressure, serum measurements
+- **Includes**: Comprehensive visualization, residual analysis, feature importance ranking
+
+### 3. Transportation Cost Prediction
+**File**: `transportation_price_regression.py`
+- **Dataset**: Custom transportation data (15 samples)
+- **Problem**: Predict travel costs based on distance
+- **Features**: Distance in kilometers
+- **Focus**: Simple univariate regression demonstration
+
+## Implementation Features
 - **Algorithm**: Linear Regression (Ordinary Least Squares)
-- **Train/Test Split**: 80/20 (16,512/4,128 samples)
-- **Random State**: 42 (for reproducibility)
-- **Evaluation Metric**: Mean Squared Error (MSE)
+- **Train/Test Split**: Proper data splitting with random states for reproducibility
+- **Evaluation Metrics**: MSE, R² score, RMSE (where applicable)
+- **Visualization**: Scatter plots, regression lines, residual analysis
+- **Documentation**: Comprehensive code comments and docstrings
 
-## Results
-- **MSE**: ~0.556
-- **Interpretation**: Average prediction error of approximately $74,600
+## Common Learning Outcomes
+- Data loading and preprocessing techniques
+- Train/test split methodology
+- Linear regression model training and evaluation
+- Performance metrics interpretation
+- Visualization of regression results
+- Understanding different problem domains (real estate, healthcare, transportation)
 
 ## Usage
 ```bash
-python LinearRegression.py
+# Run individual projects
+python california_housing_regression.py
+python diabetes_regression.py
+python transportation_price_regression.py
 ```
 
 ## Requirements
 ```
 scikit-learn>=1.0.0
 numpy>=1.21.0
+matplotlib>=3.5.0
+pandas>=1.3.0  # For diabetes regression feature analysis
 ```
 
-## Key Learning Outcomes
-- Data loading and preprocessing
-- Train/test split methodology
-- Linear regression model training
-- Model evaluation using MSE
-- Understanding of regression problem setup
+## Technical Skills Demonstrated
+- **Data Handling**: Multiple dataset types and sizes
+- **Model Training**: Scikit-learn LinearRegression implementation
+- **Evaluation**: MSE, R², residual analysis
+- **Visualization**: Matplotlib plotting and analysis
+- **Code Quality**: Professional documentation and structure
 
-## Future Improvements
-- Add R² score evaluation
-- Implement feature scaling
-- Add data visualization
-- Compare with polynomial regression
-- Cross-validation implementation
+## Future Enhancements
+- [ ] Add feature scaling implementations
+- [ ] Include cross-validation analysis
+- [ ] Compare with polynomial regression
+- [ ] Add more diverse datasets
+- [ ] Implement regularized regression (Ridge, Lasso)
+- [ ] Performance optimization techniques
+
+## Project Structure
+```
+Linear_Regression/
+├── california_housing_regression.py    # Real estate price prediction
+├── diabetes_regression.py              # Healthcare progression modeling
+├── transportation_price_regression.py  # Cost estimation model
+└── README.md                           # This documentation
+```
+
+---
+*Part of Machine Learning Portfolio - Demonstrating fundamental regression techniques across multiple domains*
